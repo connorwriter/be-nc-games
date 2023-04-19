@@ -394,3 +394,11 @@ describe("GET /api/users", () => {
       });
   });
 });
+describe("GET /api", () => {
+  it("should respond with a json guide to use the app", () => {
+    return request(app)
+      .get("/api")
+      .expect(200)
+      .then((result) => {});
+  });
+});
